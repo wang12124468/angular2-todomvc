@@ -1,4 +1,9 @@
 <header class="header">
-  <h1>todos</h1>
-  <input type="text" ngClass="{'new-todo': newTodo}" placeholder="What needs to be done?">
+  <h1>Todos</h1>
+  <input #input
+    type="text" 
+    class="new-todo" 
+    [(ngModel)]="inputValue" 
+    (keyup.enter)="enterUp()" 
+    [placeholder]="placeholder">
 </header>

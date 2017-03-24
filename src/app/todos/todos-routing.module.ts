@@ -6,6 +6,11 @@ import { TodosComponent } from './todos.component';
 const routes: Routes = [
     {
         path: '',
+        redirectTo: 'all',
+        pathMatch: 'full'
+    },
+    {
+        path: ':filter',
         component: TodosComponent
     }
 ]

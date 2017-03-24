@@ -1,14 +1,18 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 
-import { todoReducer, todoFilterReducer } from './store/reducers';
+import { todoFilterReducer, todoReducer } from './store/reducers';
+
+export function combinedReducer() {
+    return {
+        todos: todoReducer,
+        todoFilter: todoFilterReducer
+    }
+}
 
 @NgModule({
     imports: [
-        StoreModule.provideStore({
-            todos: todoReducer,
-            todoFilter: todoFilterReducer
-        })
+        StoreModule.provideStore(combinedReducer)
     ]
 })
 export class CoreModule {

@@ -1,0 +1,6 @@
+<section class="main" *ngIf="todos?.length > 0">
+  <input type="checkbox" #input  class="toggle-all" (click)="toggleAll()">
+  <ul class="todo-list">
+    <app-todo-item *ngFor="let todo of todos" [todo]="todo" (itemRemoved)="itemRemoved($event)" (itemToggle)="itemToggle($event)" (itemModified)="itemModified($event)"></app-todo-item>
+  </ul>
+</section>

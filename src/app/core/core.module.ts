@@ -3,16 +3,12 @@ import { StoreModule } from '@ngrx/store';
 
 import { todoFilterReducer, todoReducer } from './store/reducers';
 
-export function combinedReducer() {
-    return {
-        todos: todoReducer,
-        todoFilter: todoFilterReducer
-    }
-}
-
 @NgModule({
     imports: [
-        StoreModule.provideStore(combinedReducer)
+        StoreModule.provideStore({
+        todos: todoReducer,
+        todoFilter: todoFilterReducer
+    })
     ]
 })
 export class CoreModule {

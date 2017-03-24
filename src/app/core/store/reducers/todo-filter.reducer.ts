@@ -1,7 +1,7 @@
 import { Reducer, Action } from '@ngrx/store';
 import { VisibilityFilters } from '../actions';
 
-export let todoFilterReducer = (state = (todo) => todo, action: Action) => {
+export function todoFilterReducer(state = (todo) => todo, action: Action) {
     switch (action.type) {
         case VisibilityFilters.SHOW_ALL:
             console.log(VisibilityFilters.SHOW_ALL)

@@ -9,7 +9,7 @@ import {
     MODIFY_TODO
 } from '../actions';
 
-export let todoReducer = (state: any[] = [], action: Action) => {
+export function todoReducer(state: any[] = [], action: Action) {
     switch(action.type) {
         case ADD_TODO: 
             console.log(ADD_TODO);

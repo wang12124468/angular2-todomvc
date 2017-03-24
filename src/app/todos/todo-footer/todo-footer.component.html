@@ -1,0 +1,18 @@
+<footer class="footer">
+  <span class="todo-count">
+    <strong>{{ itemCount }}</strong>
+    {{ itemCount === 1 ? 'item' : 'items' }} left
+  </span>
+  <ul class="filters">
+    <li>
+      <a routerLink="/todos/all" [class.selected]="filter === 'all'">All</a>
+    </li>
+    <li>
+      <a routerLink="/todos/active" [class.selected]="filter === 'active'">Active</a>
+    </li>
+    <li>
+      <a routerLink="/todos/completed" [class.selected]="filter === 'completed'">Completed</a>
+    </li>
+  </ul>
+  <button class="clear-completed" (click)="removeCompleted()">Clear completed</button>
+</footer>

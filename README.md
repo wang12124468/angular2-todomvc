@@ -27,4 +27,6 @@
             // 改变状态  
             this.store$.dispatch({ type: ADD_TODO, payload: newTodo });  
         }
+## 扩展
 
+基于angular2 + ngrx + express + mysql的前后端分离的示例：[angular2 with server](https://github.com/wang12124468/angular2-with-server)
